@@ -11,37 +11,53 @@ const ContactPage = ({
   return (
     <Layout>
       <Helmet>
-        <title>Contact — {site.siteMetadata.title}</title>
+        <title>About — {site.siteMetadata.title}</title>
         <meta name="description" content={"Contact page of " + site.siteMetadata.description} />
       </Helmet>
-      <div className="two-grids -contact">
+      <div className="card -about">
         <div className="post-thumbnail" style={{backgroundImage: `url('/assets/alexander-andrews-HgUDpaGPTEA-unsplash.jpg')`, marginBottom: 0}}>
-          <h1 className="post-title">Get in Touch</h1>
-          <p>Let me help you kick start your next project &rarr;</p>
+          <h1 className="post-title">About Me</h1>
+          <p>I design a user-centered interface and find new solutions against problems on all digital products. <br/>
+Always passionate and curious about everthing new! &darr;</p>
         </div>
+      </div>
+      <div className="two-grids -contact -about">
         <div>
-          <form className="form-container" action="https://sendmail.w3layouts.com/SubmitContactForm" method="post">
-            <div>
-              <label htmlFor="w3lName">Name</label>
-              <input type="text" name="w3lName" id="w3lName"/>
-            </div>
-            <div>
-              <label htmlFor="w3lSender">Email</label>
-              <input type="email" name="w3lSender" id="w3lSender"/>
-            </div>
-            <div>
-              <label htmlFor="w3lSubject">Subject</label>
-              <input type="text" name="w3lSubject" id="w3lSubject"/>
-            </div>
-            <div>
-              <label htmlFor="w3lMessage">Message</label>
-              <textarea name="w3lMessage" id="w3lMessage"></textarea>
-            </div>
-            <div style={{display: "flex", justifyContent: "flex-end"}}>
-              <input type="submit" className="button -primary" style={{marginRight: 0}} />
-            </div>
-          </form>
+          <h3>Specialities</h3>
+          <p>UX Research</p>
+          <p>UI Design </p>
+          <p>for all digital products(Web&App)</p>
         </div>
+
+        <div>
+          <h3>Proficient in</h3>
+          <p>Design Thinking</p>
+          <p>User Research</p>
+          <p>Wireframing</p>
+          <p>Prototyping</p>
+          <p>User Test</p>
+          <p>... and making Design System</p>
+        </div>
+
+        <div>
+          <h3>Skilled in</h3>
+          <p>Sketch </p>
+          <p>XD</p>
+          <p>Protopie </p>
+          <p>Photoshop </p>
+          <p>Illustrator </p>
+          <p>Premier Pro </p>
+        </div>
+
+        <div>
+          <h3>Also</h3>
+          <p>HTML / SCSS / JS</p>
+          <p>ReactJS / Angular</p>
+          <p>Git</p>
+          <p>Confluence / Jira</p>
+          <p>Google Analytics </p>
+        </div>
+
       </div>
     </Layout>
   )

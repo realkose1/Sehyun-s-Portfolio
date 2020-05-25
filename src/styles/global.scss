@@ -246,6 +246,17 @@ a {
     color: var(--text-color);
     text-decoration: none;
   }
+  &.-about {
+    margin-bottom: 48px;
+    .post-title {
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .post-thumbnail {
+      min-height: 300px;
+    }
+  }
+
 }
 .post-meta {
   font-size: 0.8rem;
@@ -257,6 +268,15 @@ a {
   color: #666;
   a {
     font-weight: 700;
+    margin-right: 10px;
+    i {
+      &.gg-facebook {
+        transform: scale(var(--ggs, 1));
+      }
+      &.gg-mail {
+        transform: scale(var(--ggs, 1.2));
+      }
+    }
   }
 }
 .form-container {
@@ -291,9 +311,14 @@ a {
 .two-grids {
   display: grid;
   grid-gap: 32px;
-  &.-contact {
+  &.-contact{
     .post-thumbnail {
       min-height: 240px !important;
+    }
+  }
+  &.-about {
+    p {
+      margin-bottom: 5px;
     }
   }
 }
@@ -405,3 +430,102 @@ body.light {
     top: 8px;
     left: 2px
 }
+
+.gg-instagram {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  transform: scale(var(--ggs,1));
+  border: 2px solid transparent;
+  box-shadow: 0 0 0 2px;
+  border-radius: 4px;
+  width: 20px;
+  height: 20px
+ }
+ 
+ .gg-instagram::after,
+ .gg-instagram::before {
+  content: "";
+  display: block;
+  box-sizing: border-box;
+  position: absolute
+ }
+ 
+ .gg-instagram::after {
+  border: 2px solid;
+  left: 3px;
+  width: 10px;
+  height: 10px;
+  border-radius: 100%;
+  top: 3px
+ }
+ 
+ .gg-instagram::before {
+  border-radius: 3px;
+  width: 2px;
+  height: 2px;
+  background: currentColor;
+  right: 1px;
+  top: 1px
+ } 
+
+ .gg-mail,
+ .gg-mail::after {
+  display: inline-block;
+  box-sizing: border-box;
+  height: 14px;
+  border: 2px solid
+ }
+ 
+ .gg-mail {
+  overflow: hidden;
+  transform: scale(var(--ggs,1));
+  position: relative;
+  width: 18px;
+  border-radius: 2px
+ }
+ 
+ .gg-mail::after {
+  content: "";
+  position: absolute;
+  border-radius: 3px;
+  width: 14px;
+  transform: rotate(-45deg);
+  bottom: 3px;
+  left: 0
+ } 
+
+ .gg-facebook {
+  box-sizing: border-box;
+  position: relative;
+  display: inline-block;
+  transform: scale(var(--ggs,1));
+  width: 20px;
+  height: 20px
+ }
+ 
+ .gg-facebook::after,
+ .gg-facebook::before {
+  content: "";
+  display: block;
+  position: absolute;
+  box-sizing: border-box
+ }
+ 
+ .gg-facebook::before {
+  width: 8px;
+  height: 20px;
+  border-left: 4px solid;
+  border-top: 4px solid;
+  border-top-left-radius: 5px;
+  left: 6px
+ }
+ 
+ .gg-facebook::after {
+  width: 10px;
+  height: 4px;
+  background: currentColor;
+  top: 7px;
+  left: 4px;
+  transform: skew(-5deg)
+ } 
